@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+%\usepackage[english]{babel}
+\RequirePackage[spanish]{babel}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+%\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage[pdftex,bookmarks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage[utf8]{inputenc}
+\usepackage{epstopdf}
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage[toc, acronym]{glossaries}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{multirow}
+\parskip 3ex % espacio entre parrafos.
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+\input{cap/Glosario.tex} % Preparar Glosario
+
+
+\begin{document}
+%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+   		\includegraphics[scale=.5]{imgs/logo_utal.png}
+	\end{minipage}
+		\begin{minipage}{0.45\textwidth}
+		\begin{flushright}
+	   		\includegraphics[scale=.5]{imgs/logo_udg.png}
+		\end{flushright}
+	\end{minipage}
+\end{figure}
+
+\begin{center}
+Facultad de Ingeniería\\
+Escuela Politécnica Superior\\
+Trabajo de Final de Grado\\
+\bigskip\bigskip\bigskip\bigskip
+
+\rule{14cm}{0.5mm}
+
+\begin{Huge}\textbf{Título de informe}\end{Huge}
+
+\rule{14cm}{0.5mm}
+
+\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+
+\begin{tabular*}{14cm}{l@{\extracolsep{\fill}}r}
+\textbf{\emph{Estudiante:}} & \textbf{\emph{Profesores Guia:}}\\
+José Francisco Riffo & Imma Boada\\
+& Pablo Rojas\\
+\end{tabular*}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{plain}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoftables
+
+%%%%%%%% INTRODUCCIÓN %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Introduccion.tex}
+
+%%%%%%%% VIABILIDAD %%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Viabilidad.tex}
+
+%%%%%%%% PLANIFICACIÓN %%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Planificacion.tex}
+
+%%%%%%%% MARCO DE TRABAJO %%%%%%%%%%%%%
+\newpage
+\input{cap/Marco_de_trabajo.tex}
+
+%%%%%%%% DISEÑO %%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Diseno.tex}
+
+%%%%%%%% IMPLEMENTACIÓN %%%%%%%%%%%%%%%
+\newpage
+\input{cap/Implementacion.tex}
+
+%%%%%%%% RESULTADOS %%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Resultados.tex}
+
+%%%%%%%% CONCLUSIONES %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Conclusiones.tex}
+
+%%%%%%%% TRABAJO FUTURO %%%%%%%%%%%%%%%
+\newpage
+\input{cap/Trabajo_Futuro.tex}
+
+%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Bibliografia.tex}
+
+%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Anexos.tex}
+\end{document}
