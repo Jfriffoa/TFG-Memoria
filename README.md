@@ -1,5 +1,4 @@
 # La Influencia de los Videojuegos 
----
 
 ## Introducción
 *"Desde el inicio de los videojuegos es habitual que el jugador deba enfrentarse a la toma de decisiones, desde los juegos más sencillos como Tetris -donde debes decidir donde color la siguiente pieza- hasta juegos más complejos como Detroit: Become Human, en el cual cada acción que realizas y cada dialogo que escoges tiene un impacto en la historia."*
