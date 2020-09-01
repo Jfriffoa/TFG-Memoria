@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+%\usepackage[english]{babel}
+\RequirePackage[spanish]{babel}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+%\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage[pdftex,bookmarks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\usepackage[utf8]{inputenc}
+\usepackage{epstopdf}
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{lscape}
+\usepackage{float}
+\usepackage{rotating} % Para mostrar la gantt horizontal 
+\usepackage{listings} % Para insertar codigo
+\usepackage[toc, acronym]{glossaries}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage[official]{eurosym}
+\parskip 3ex % espacio entre parrafos.
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+\input{cap/Glosario.tex} % Preparar Glosario
+
+%%% Colores para las tablas
+\definecolor{Gray}{gray}{0.9}
+\definecolor{Green}{rgb}{.22, .46, .11}
+\definecolor{Light Green}{rgb}{.66, .8, .6}
+\definecolor{Violet}{rgb}{.45, .11, .28}
+\definecolor{Light Violet}{rgb}{.66, .42, .54}
+\definecolor{Orange}{rgb}{.71, .37, .02}
+\definecolor{Light Orange}{rgb}{.84, .59, .32}
+\definecolor{Blue}{rgb}{.04, .33, .58}
+\definecolor{Light Blue}{rgb}{.38, .6, .79}
+\definecolor{Red}{rgb}{.6, 0, 0}
+\definecolor{Light Red}{rgb}{.72, .31, .31}
+\definecolor{Yellow}{rgb}{.75, .56, 0}
+\definecolor{Light Yellow}{rgb}{.85, .76, .49}
+\definecolor{Aqua}{rgb}{.07, .31, .36}
+\definecolor{Light Aqua}{rgb}{.35, .56, .61}
+\newcolumntype{x}{>{\columncolor{Gray}}l}
+
+
+\begin{document}
+%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%
+%\pagestyle{empty}
+%\begin{figure}
+%	\centering
+%	\begin{minipage}{0.45\textwidth}
+%   		\includegraphics[scale=.5]{imgs/logo_utal.png}
+%	\end{minipage}
+%	\begin{minipage}{0.45\textwidth}
+%	   		\includegraphics[scale=.5]{imgs/logo_udg.png}
+%		\end{flushright}
+%	\end{minipage}
+%\end{figure}
+
+%\begin{center}
+%Facultad de Ingeniería (U. Talca)\\
+%Escuela Politécnica Superior (UdG)\\
+%Trabajo de Final de Grado\\
+%\bigskip\bigskip\bigskip\bigskip
+
+%\rule{14cm}{0.5mm}
+
+%\begin{Huge}\textbf{La Influencia de los Videojuegos en Nuestra Moral}\end{Huge}
+
+%\rule{14cm}{0.5mm}
+
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+
+%\begin{tabular*}{14cm}{l@{\extracolsep{\fill}}r}
+%\textbf{\emph{Estudiante:}} & \textbf{\emph{Profesores Guia:}}\\
+%José Francisco Riffo & Imma Boada\\
+%& Pablo Rojas\\
+%\end{tabular*}
+%\end{center}
+
+%%%%%%%%%%%%%%% PORTADA UDG %%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\begin{tabular}{|p{\textwidth}|}
+    \hline
+    \vspace{.5mm}
+    \includegraphics[scale=.7]{imgs/udg.png}\\
+    \bigskip
+    \begin{center}
+        \begin{Huge} \textbf{Treball final de grau} \end{Huge}
+    \end{center}\\
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Estudi: Grau en Disseny i Desenvolupament de Videojocs} \end{large}
+    \vspace{5mm}\\
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Títol: La Influencia de los Videojuegos en Nuestra Moral} \end{large}
+    \vspace{5mm}\\
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Document: Memoria} \end{large}
+    \vspace{5mm}\\
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Alumne: José Francisco Riffo Astete} \end{large}
+    \vspace{5mm}\\
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Tutor: Imma Boada Oliveras} \end{large}\\
+    \begin{large} \textbf{Departament: IMAE} \end{large}\\
+    \begin{large} \textbf{Àrea: LSI} \end{large}\\[5mm]
+    \hline
+    \vspace{1mm}
+    \begin{large} \textbf{Convocatòria (mes/any): Setembre 2020} \end{large}
+    \vspace{5mm}\\
+    \hline
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{plain}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoftables
+
+%%%%%%%% INTRODUCCIÓN %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Introduccion.tex}
+
+%%%%%%%% VIABILIDAD %%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Viabilidad.tex}
+
+%%%%%%%% PLANIFICACIÓN %%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Planificacion.tex}
+
+%%%%%%%% MARCO DE TRABAJO %%%%%%%%%%%%%
+\newpage
+\input{cap/Marco_de_trabajo.tex}
+
+%%%%%%%% DISEÑO %%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Diseno.tex}
+
+%%%%%%%% IMPLEMENTACIÓN %%%%%%%%%%%%%%%
+\newpage
+\input{cap/Implementacion.tex}
+
+%%%%%%%% RESULTADOS %%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Resultados.tex}
+
+%%%%%%%% CONCLUSIONES %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Conclusiones.tex}
+
+%%%%%%%% TRABAJO FUTURO %%%%%%%%%%%%%%%
+\newpage
+\input{cap/Trabajo_Futuro.tex}
+
+%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Bibliografia.tex}
+
+%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Anexos.tex}
+\end{document}
